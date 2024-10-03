@@ -14,8 +14,8 @@ classDiagram
 	class User {
 		+first_name: String
 		+last_name: String
-		+email: String
-		+pass_word: String
+		-email: String
+		-pass_word: String
 
 		+check_administrator()
 		+register_user()
