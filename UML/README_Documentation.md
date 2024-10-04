@@ -33,7 +33,7 @@ The application follows a **layered architecture** consisting of three main laye
 The system design employs the **Facade Pattern** between the Presentation Layer and Business Logic Layer to simplify interaction and isolate complexity. Below is the high-level architecture diagram:
 
 
-''' mermaid
+```mermaid
 
 graph TD;
 
@@ -69,8 +69,8 @@ graph TD;
 	Review --> Review_repo
 	Amenity --> Amenity_repo
 
+```
 
-'''
 
 
 ## Business Logic Layer - Class Diagram
@@ -90,7 +90,7 @@ Each core business entity is modeled with a base class that includes basic funct
 - the **Review** classe associated with a user place contains comments that user can give to a place.
 - the **Amenity** classe associated to user's place contains all the commodities belongin to a user's place
 
-::: mermaid
+```mermaid
 
 classDiagram
 
@@ -154,7 +154,7 @@ classDiagram
 	Entity <|-- Review
 	Entity <|-- Amenity
 
-:::
+```
 
 
 
@@ -162,7 +162,7 @@ classDiagram
 
 The following sequence diagrams illustrate the interactions between the user, API, business logic, and persistence layers during key API calls.
 
-::: mermaid
+```mermaid
 
 sequenceDiagram
     participant User
@@ -188,13 +188,13 @@ sequenceDiagram
     BusinessLogic-->>API: returnResponse(dataSaved)
     API-->>User: Return Success
 
-:::
+```
 
 ### EXEMPLE User Registration Flow
 
 The following sequence diagram demonstrates the process of a user registration:
 
-::: mermaid
+```mermaid
 sequenceDiagram
     participant User
     participant API
@@ -209,7 +209,7 @@ sequenceDiagram
     Persistence(DataBase)-->>BusinessLogic: confirmSave()
     BusinessLogic-->>API: returnResponse(dataSaved)
     API-->>User: Return Success
-:::
+```
 
 ### Explanation:
 - The user initiates a request to create a new account by sending their details to the API.
@@ -220,7 +220,7 @@ sequenceDiagram
 
 Similarly, other API calls follow this structure, such as updating user information, adding reviews, or retrieving user data:
 
-::: mermaid
+```mermaid
 sequenceDiagram
     User->>API: updateUserInfo(userId, newInfo)
     API-->>User: Return Success/Failure
@@ -230,7 +230,7 @@ sequenceDiagram
 
     User->>API: addComment(reviewId, comment)
     API-->>User: Return Success/Failure
-:::
+```
 
 ### Explanation:
 - The **updateUserInfo** call allows users to update their profile details.
