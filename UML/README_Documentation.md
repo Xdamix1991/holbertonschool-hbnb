@@ -9,6 +9,8 @@ The documentation includes various architectural diagrams, detailed class models
 
 The goal of this document is to provide a comprehensive overview of the system architecture, the structure of key business entities, and the flow of API calls within the application. It will help developers understand the core design decisions and implement the system in a structured and efficient way.
 
+
+
 ## High-Level Architecture
 
 The application follows a **layered architecture** consisting of three main layers:
@@ -16,6 +18,17 @@ The application follows a **layered architecture** consisting of three main laye
 - **Presentation Layer**: This layer handles user interactions and API endpoints.
 - **Business Logic Layer**: This layer manages the application's core business rules and operations.
 - **Persistence Layer**: This layer is responsible for database interactions and data storage.
+
+
+### Explanation:
+
+- The **Presentation Layer** exposes a service API for user interaction and communication with the Business Logic Layer.
+- The **Business Logic Layer** manages the core operations, validating and processing the user requests.
+- The **Persistence Layer** manages the interaction with the database, performing data retrieval and storage operations.
+
+- The **User**, **Place**, **Review**, and **Amenity** entities represent the main components of the system.
+- The **Presentation Layer** (UI and API) interacts directly with the business models in the Business Logic Layer.
+- Each business entity interacts with its corresponding repository in the Persistence Layer to store and retrieve data.
 
 The system design employs the **Facade Pattern** between the Presentation Layer and Business Logic Layer to simplify interaction and isolate complexity. Below is the high-level architecture diagram:
 
@@ -57,15 +70,7 @@ graph TD;
 
 :::
 
-### Explanation:
 
-- The **Presentation Layer** exposes a service API for user interaction and communication with the Business Logic Layer.
-- The **Business Logic Layer** manages the core operations, validating and processing the user requests.
-- The **Persistence Layer** manages the interaction with the database, performing data retrieval and storage operations.
-
-- The **User**, **Place**, **Review**, and **Amenity** entities represent the main components of the system.
-- The **Presentation Layer** (UI and API) interacts directly with the business models in the Business Logic Layer.
-- Each business entity interacts with its corresponding repository in the Persistence Layer to store and retrieve data.
 
 
 ## Business Logic Layer - Class Diagram
