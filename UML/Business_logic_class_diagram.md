@@ -62,5 +62,5 @@ classDiagram
 	Entity <|-- Review
 	Entity <|-- Amenity
 
-:::
+```
 
