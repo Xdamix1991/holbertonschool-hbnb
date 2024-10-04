@@ -24,9 +24,9 @@ graph TD;
 	UI --> API
 
 	API --> User
-	API --> Place
 	API --> Review
-	API --> Amenity
+	API --> Place
+	Place --> Amenity
 
 
 	User --> User_repo

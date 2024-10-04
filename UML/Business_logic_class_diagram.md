@@ -20,6 +20,9 @@ classDiagram
 		+check_administrator()
 		+register_user()
 		+update_user_info()
+		+create()
+		+update()
+		+delete()
 	}
 
 	class Place {
@@ -30,6 +33,9 @@ classDiagram
 
 		+owner()
 		+list_of_amenities()
+		+create()
+		+update()
+		+delete()
 	}
 
 	class Review {
@@ -38,6 +44,9 @@ classDiagram
 
 		+association_to_user()
 		+association_to_place()
+		+create()
+		+update()
+		+delete()
 	}
 
 	class Amenity {
@@ -53,7 +62,5 @@ classDiagram
 	Entity <|-- Review
 	Entity <|-- Amenity
 
+:::
 
-User "1" -- "0..*" Review : leaves >
-User "1" -- "0..*" Place : owns >
-Place "1" -- "0..*" Amenity : have >
