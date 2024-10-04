@@ -32,7 +32,8 @@ The application follows a **layered architecture** consisting of three main laye
 
 The system design employs the **Facade Pattern** between the Presentation Layer and Business Logic Layer to simplify interaction and isolate complexity. Below is the high-level architecture diagram:
 
-::: mermaid
+
+''' mermaid
 
 graph TD;
 
@@ -68,9 +69,8 @@ graph TD;
 	Review --> Review_repo
 	Amenity --> Amenity_repo
 
-:::
 
-
+'''
 
 
 ## Business Logic Layer - Class Diagram
