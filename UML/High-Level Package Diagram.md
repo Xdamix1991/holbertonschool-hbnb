@@ -34,4 +34,4 @@ graph TD;
 	Review --> Review_repo
 	Amenity --> Amenity_repo
 
-:::
+```
