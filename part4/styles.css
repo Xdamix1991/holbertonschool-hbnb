@@ -2,6 +2,9 @@
   This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks.
   You'll probably need to override some of theese styles.
 */
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     box-sizing: border-box;
@@ -16,17 +19,114 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: orange;
     color: #fff;
     padding: 1rem;
+    display: flex;
+    position: relative;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     margin-left: 1rem;
+    position: relative;
+    top: 25%;
 }
 
 main {
     padding: 2rem;
+}
+
+.footer_main {
+    background-color: orange;
+    position: absolute;
+    height: 60px;
+    bottom: 0;
+    width: 100%;
+    display: inline-block;
+}
+.footer_main p {
+    color: #f4f4f4;
+    font-style: italic;
+    font-size: small;
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    top: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.footer_main ul li {
+    display: inline;
+
+}
+.links_footer li a {
+    position: relative;
+    display: inline-block ;
+    color: #fff;
+    left: 90%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.main li {
+    display: inline;
+
+    border: 0;
+    margin: 0%;
+
+}
+.main li a {
+    font-size: x-large;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: 0.5 ease;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.main li a:hover{
+    background-color: #fff;
+    color: black;
+
+}
+
+#login-link{
+    position: absolute;
+    font-size: large;
+    display: flex;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+    left: 90%;
+
+}
+a #login-link {
+    top: auto;
+}
+
+#login-link:hover{
+    background-color: #fff;
+    color: black;
+
+}
+
+.logo{
+    display: block;
+    position: relative;
+    left: 5%;
+    margin: 0;
+}
+a.logo{
+    top: auto;
 }

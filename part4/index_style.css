@@ -1,0 +1,49 @@
+#filter{
+	position: relative;
+	display: flex;
+	justify-content: center;
+
+}
+#cards-container{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	height: 50%;
+	bottom: 50%;
+	padding: 15px;
+}
+
+div.place-card{
+	position: relative;
+	padding: 15px;
+	margin: 20px;
+    padding: 10px;
+	border-radius: 10px;
+	border: 1px solid;
+	flex-direction:column;
+}
+div.place-card h3 {
+
+	padding: 15px;
+	display: flexbox;
+	text-align: center;
+	position:inherit;
+	bottom: 50%
+}
+
+div.place-card p {
+	display: flexbox;
+	text-align: center;
+	position: inherit;
+	bottom: 15%;
+}
+
+#places-list h1 {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+
+    position: relative;
+	font-size: 36px;
+	padding: 15px;
+}
